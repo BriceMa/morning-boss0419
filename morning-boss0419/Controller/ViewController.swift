@@ -32,6 +32,8 @@ class ViewController: UIViewController {
 
             selectButton.center.y = yPosition
             
+            // Changement de content de l'image selon la position
+            
             if distance < 20 {
                 selectButton.image = UIImage(named: "arrowsButtonGreen")
             } else if  distance > -20 {

@@ -14,9 +14,9 @@
 		42A497922251F88700866C32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A497902251F88700866C32 /* LaunchScreen.storyboard */; };
 		42A497A82251F88800866C32 /* morning_boss0419UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497A72251F88800866C32 /* morning_boss0419UITests.swift */; };
 		42A497BD2252021500866C32 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497BC2252021500866C32 /* User.swift */; };
-		42A497C1225205B700866C32 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497C0225205B700866C32 /* UserTest.swift */; };
 		42A497C3225236C000866C32 /* Lieu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497C2225236C000866C32 /* Lieu.swift */; };
 		42A497C522523A6B00866C32 /* LieuTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497C422523A6B00866C32 /* LieuTest.swift */; };
+		42A497CB2252586300866C32 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497CA2252586300866C32 /* UserTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +53,10 @@
 		42A497BA2251FB2700866C32 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		42A497BB2251FB4100866C32 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Bold.ttf"; path = "../../../../../../../../Library/Fonts/PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		42A497BC2252021500866C32 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		42A497C0225205B700866C32 /* UserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTest.swift; sourceTree = "<group>"; };
 		42A497C2225236C000866C32 /* Lieu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lieu.swift; sourceTree = "<group>"; };
 		42A497C422523A6B00866C32 /* LieuTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LieuTest.swift; sourceTree = "<group>"; };
+		42A497CA2252586300866C32 /* UserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTest.swift; sourceTree = "<group>"; };
+		42A497CC2252593E00866C32 /* morning-boss0419Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "morning-boss0419Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,8 +175,9 @@
 		42A497BE2252057C00866C32 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				42A497C0225205B700866C32 /* UserTest.swift */,
 				42A497C422523A6B00866C32 /* LieuTest.swift */,
+				42A497CA2252586300866C32 /* UserTest.swift */,
+				42A497CC2252593E00866C32 /* morning-boss0419Tests-Bridging-Header.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,8 +325,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A497CB2252586300866C32 /* UserTest.swift in Sources */,
 				42A497C522523A6B00866C32 /* LieuTest.swift in Sources */,
-				42A497C1225205B700866C32 /* UserTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
