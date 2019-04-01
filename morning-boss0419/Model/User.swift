@@ -14,6 +14,7 @@ class User {
     private var _mail: String
     private var _tel: String
     private var _password: String
+    var lieu: Lieu?
     
     var prenom: String {return _prenom}
     var nom: String {return _nom}
@@ -21,11 +22,12 @@ class User {
     var tel: String {return _tel}
     var password: String {return _password}
     
-    init(prenom: String, nom: String, mail:String, tel: String, password: String) {
+    init(prenom: String, nom: String, mail:String, tel: String, password: String, lieu: Lieu?) {
         _prenom = prenom
         _nom = nom
         _mail = mail
         _tel = tel
         _password = password
+        self.lieu = lieu
     }
 }
