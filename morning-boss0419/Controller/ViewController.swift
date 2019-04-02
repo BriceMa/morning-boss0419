@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet var container: UIView!
     @IBOutlet weak var selectButton: UIImageView!
     
+    var segueDeclinateMenu = "declinateMenu"
+    var segueValidateMenu = "validateMenu"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +35,23 @@ class ViewController: UIViewController {
 
             selectButton.center.y = yPosition
             
+            print(distance)
+            
             // Changement de content de l'image selon la position
             
-            if distance < 20 {
-                selectButton.image = UIImage(named: "arrowsButtonGreen")
-            } else if  distance > -20 {
+            if distance > 60 {
                 selectButton.image = UIImage(named: "arrowsButtonRed")
-            }else{
+
+                if distance > 100{
+                    
+                    performSegue(withIdentifier: segueDeclinateMenu, sender: nil)
+                }
+            } else if  distance < -60 {
+                selectButton.image = UIImage(named: "arrowsButtonGreen")
+                if distance < -100{
+                    performSegue(withIdentifier: segueValidateMenu, sender: nil)
+                }
+            }else if distance >= -60 && distance <= 60{
                 selectButton.image = UIImage(named: "arrowsButtons")
 
             }
@@ -51,9 +64,11 @@ class ViewController: UIViewController {
             let touch = touches.first,
             touch.view == selectButton
         {
+            
             // Remettre à la position initiale
         }
     }
+    
 
 }
 
