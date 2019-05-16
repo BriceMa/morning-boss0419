@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42A497882251F87E00866C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497872251F87E00866C32 /* AppDelegate.swift */; };
-		42A4978A2251F87E00866C32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497892251F87E00866C32 /* ViewController.swift */; };
+		42A4978A2251F87E00866C32 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497892251F87E00866C32 /* HomeController.swift */; };
 		42A4978D2251F87E00866C32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A4978B2251F87E00866C32 /* Main.storyboard */; };
 		42A4978F2251F88700866C32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A4978E2251F88700866C32 /* Assets.xcassets */; };
 		42A497922251F88700866C32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A497902251F88700866C32 /* LaunchScreen.storyboard */; };
@@ -20,6 +20,7 @@
 		42A497CE2253451C00866C32 /* DeclineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497CD2253451C00866C32 /* DeclineController.swift */; };
 		42A6D64622538343004A5AB3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A6D64522538343004A5AB3 /* Product.swift */; };
 		42A6D64822538447004A5AB3 /* Allergens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A6D64722538447004A5AB3 /* Allergens.swift */; };
+		42E2A9B0228D400200E3D916 /* ValidateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E2A9AF228D400200E3D916 /* ValidateController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 /* Begin PBXFileReference section */
 		42A497842251F87E00866C32 /* morning-boss0419.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "morning-boss0419.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A497872251F87E00866C32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42A497892251F87E00866C32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42A497892251F87E00866C32 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		42A4978C2251F87E00866C32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42A4978E2251F88700866C32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42A497912251F88700866C32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		42A497CD2253451C00866C32 /* DeclineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclineController.swift; sourceTree = "<group>"; };
 		42A6D64522538343004A5AB3 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		42A6D64722538447004A5AB3 /* Allergens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergens.swift; sourceTree = "<group>"; };
+		42E2A9AF228D400200E3D916 /* ValidateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +177,9 @@
 		42A497B82251FB0200866C32 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				42A497892251F87E00866C32 /* ViewController.swift */,
+				42A497892251F87E00866C32 /* HomeController.swift */,
 				42A497CD2253451C00866C32 /* DeclineController.swift */,
+				42E2A9AF228D400200E3D916 /* ValidateController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -324,8 +327,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A497C3225236C000866C32 /* Lieu.swift in Sources */,
+				42E2A9B0228D400200E3D916 /* ValidateController.swift in Sources */,
 				42A497CE2253451C00866C32 /* DeclineController.swift in Sources */,
-				42A4978A2251F87E00866C32 /* ViewController.swift in Sources */,
+				42A4978A2251F87E00866C32 /* HomeController.swift in Sources */,
 				42A497882251F87E00866C32 /* AppDelegate.swift in Sources */,
 				42A497BD2252021500866C32 /* User.swift in Sources */,
 				42A6D64822538447004A5AB3 /* Allergens.swift in Sources */,

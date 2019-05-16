@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeController: UIViewController {
 
     @IBOutlet var container: UIView!
     @IBOutlet weak var selectButton: UIImageView!
+    @IBOutlet weak var ellipseBg: UIImageView!
     
     var segueDeclinateMenu = "declinateMenu"
     var segueValidateMenu = "validateMenu"
@@ -32,9 +33,14 @@ class ViewController: UIViewController {
         {
             let yPosition = touch.location(in: container).y
             let distance = container.frame.midY - yPosition
-
-            selectButton.center.y = yPosition
             
+//            selectButton.layer.anchorPoint = CGPoint(
+//                x: selectButton.center.x + self.ellipseBg.frame.width,
+//                y: selectButton.center.y)
+//            selectButton?.transform = CGAffineTransform(rotationAngle: -distance/360)
+
+            selectButton.center.y = yPosition 
+
             print(distance)
             
             // Changement de content de l'image selon la position
