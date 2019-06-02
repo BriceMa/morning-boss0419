@@ -21,6 +21,11 @@
 		42A6D64622538343004A5AB3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A6D64522538343004A5AB3 /* Product.swift */; };
 		42A6D64822538447004A5AB3 /* Allergens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A6D64722538447004A5AB3 /* Allergens.swift */; };
 		42E2A9B0228D400200E3D916 /* ValidateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E2A9AF228D400200E3D916 /* ValidateController.swift */; };
+		42E2C65722A3DD0000877877 /* PaymentChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E2C65622A3DD0000877877 /* PaymentChoiceController.swift */; };
+		42E2C65922A3DD3A00877877 /* CreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E2C65822A3DD3A00877877 /* CreditCardController.swift */; };
+		42E2C65B22A3DD6E00877877 /* RecapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E2C65A22A3DD6E00877877 /* RecapController.swift */; };
+		42E2C65D22A3DD9A00877877 /* EndOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E2C65C22A3DD9A00877877 /* EndOrderController.swift */; };
+		42E2C65F22A3E61700877877 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E2C65E22A3E61700877877 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +70,11 @@
 		42A6D64522538343004A5AB3 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		42A6D64722538447004A5AB3 /* Allergens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergens.swift; sourceTree = "<group>"; };
 		42E2A9AF228D400200E3D916 /* ValidateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateController.swift; sourceTree = "<group>"; };
+		42E2C65622A3DD0000877877 /* PaymentChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentChoiceController.swift; sourceTree = "<group>"; };
+		42E2C65822A3DD3A00877877 /* CreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardController.swift; sourceTree = "<group>"; };
+		42E2C65A22A3DD6E00877877 /* RecapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapController.swift; sourceTree = "<group>"; };
+		42E2C65C22A3DD9A00877877 /* EndOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOrderController.swift; sourceTree = "<group>"; };
+		42E2C65E22A3E61700877877 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +180,7 @@
 		42A497B72251FAF900866C32 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				42E2C65E22A3E61700877877 /* UIViewExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +191,10 @@
 				42A497892251F87E00866C32 /* HomeController.swift */,
 				42A497CD2253451C00866C32 /* DeclineController.swift */,
 				42E2A9AF228D400200E3D916 /* ValidateController.swift */,
+				42E2C65622A3DD0000877877 /* PaymentChoiceController.swift */,
+				42E2C65822A3DD3A00877877 /* CreditCardController.swift */,
+				42E2C65A22A3DD6E00877877 /* RecapController.swift */,
+				42E2C65C22A3DD9A00877877 /* EndOrderController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -327,13 +342,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A497C3225236C000866C32 /* Lieu.swift in Sources */,
+				42E2C65722A3DD0000877877 /* PaymentChoiceController.swift in Sources */,
 				42E2A9B0228D400200E3D916 /* ValidateController.swift in Sources */,
 				42A497CE2253451C00866C32 /* DeclineController.swift in Sources */,
+				42E2C65922A3DD3A00877877 /* CreditCardController.swift in Sources */,
 				42A4978A2251F87E00866C32 /* HomeController.swift in Sources */,
+				42E2C65D22A3DD9A00877877 /* EndOrderController.swift in Sources */,
 				42A497882251F87E00866C32 /* AppDelegate.swift in Sources */,
 				42A497BD2252021500866C32 /* User.swift in Sources */,
+				42E2C65F22A3E61700877877 /* UIViewExtension.swift in Sources */,
 				42A6D64822538447004A5AB3 /* Allergens.swift in Sources */,
 				42A6D64622538343004A5AB3 /* Product.swift in Sources */,
+				42E2C65B22A3DD6E00877877 /* RecapController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
