@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.0.0-beta.6)
+  - PayCardsRecognizer (1.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
+  - PayCardsRecognizer
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - PayCardsRecognizer
+
+SPEC CHECKSUMS:
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
+  PayCardsRecognizer: b939eec21c6890d57c9f22cb8856517922b097a2
+
+PODFILE CHECKSUM: 5ed089fe2481f466ea03bee23ea7f99d69c03b56
+
+COCOAPODS: 1.7.1

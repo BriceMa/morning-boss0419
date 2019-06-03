@@ -14,8 +14,8 @@ class HomeController: UIViewController {
     @IBOutlet weak var selectButton: UIImageView!
     @IBOutlet weak var ellipseBg: UIImageView!
     
-    var segueDeclinateMenu = "declinateMenu"
-    var segueValidateMenu = "validateMenu"
+    private var _segueDeclinateMenu = "declinateMenu"
+    private var _segueValidateMenu = "validateMenu"
     
     
     override func viewDidLoad() {
@@ -33,15 +33,9 @@ class HomeController: UIViewController {
         {
             let yPosition = touch.location(in: container).y
             let distance = container.frame.midY - yPosition
-            
-//            selectButton.layer.anchorPoint = CGPoint(
-//                x: selectButton.center.x + self.ellipseBg.frame.width,
-//                y: selectButton.center.y)
-//            selectButton?.transform = CGAffineTransform(rotationAngle: -distance/360)
 
             selectButton.center.y = yPosition 
 
-            print(distance)
             
             // Changement de content de l'image selon la position
             
@@ -50,12 +44,12 @@ class HomeController: UIViewController {
 
                 if distance > 100{
                     
-                    performSegue(withIdentifier: segueDeclinateMenu, sender: nil)
+                    performSegue(withIdentifier: _segueDeclinateMenu, sender: nil)
                 }
             } else if  distance < -60 {
                 selectButton.image = UIImage(named: "arrowsButtonGreen")
                 if distance < -100{
-                    performSegue(withIdentifier: segueValidateMenu, sender: nil)
+                    performSegue(withIdentifier: _segueValidateMenu, sender: nil)
                 }
             }else if distance >= -60 && distance <= 60{
                 selectButton.image = UIImage(named: "arrowsButtons")

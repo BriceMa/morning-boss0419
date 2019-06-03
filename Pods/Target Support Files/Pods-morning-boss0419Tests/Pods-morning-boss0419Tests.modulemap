@@ -1,0 +1,6 @@
+framework module Pods_morning_boss0419Tests {
+  umbrella header "Pods-morning-boss0419Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
