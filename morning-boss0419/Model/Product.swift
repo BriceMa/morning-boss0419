@@ -1,25 +1,24 @@
-import UIKit
+//
+//  Product.swift
+//  morning-boss0419
+//
+//  Created by Brice on 04/06/2019.
+//  Copyright © 2019 Brice Mangeat. All rights reserved.
+//
 
-class Product {
-    private var _name: String
-    private var _shortdesc: String
-    private var _longdesc: String
-    private var _image: UIImage
-    private var _categorie: String
-    var allergens: Allergens?
-    
-    var name: String {return _name}
-    var shortdesc: String {return _shortdesc}
-    var longdesc: String {return _longdesc}
-    var image: UIImage {return _image}
-    var categorie: String {return _categorie}
-    
-    init(name: String, shortdesc: String, longdesc: String, categorie: String, image: UIImage, allergens: Allergens?) {
-        _name = name
-        _shortdesc = shortdesc
-        _longdesc = longdesc
-        _categorie = categorie
-        _image = image
-        self.allergens = allergens
-    }
+import Foundation
+
+
+struct Produit{
+    var name: String
+    var shortDesc: String
+    var longDesc: String
+    var categorie: String
+    var _id: String
+    var createdAt: String
+    var updatedAt: String
+    var __v: Int
+    var id: String
+    var imageProduct: String
+    var allergens: String
 }

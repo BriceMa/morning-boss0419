@@ -9,22 +9,27 @@
 import UIKit
 
 class RecapController: UIViewController {
+    
+    var name: String?
+    var address: String?
+    var town: String?
+    var time: String?
 
+    @IBOutlet weak var timeTxtField: UILabel!
+    @IBOutlet weak var addressTxtField: UILabel!
+    @IBOutlet weak var townTxtField: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(address)
+        
+        timeTxtField.text = self.time
+        addressTxtField.text = self.address
+        townTxtField.text = self.town
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
