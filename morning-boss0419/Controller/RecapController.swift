@@ -35,12 +35,11 @@ class RecapController: UIViewController {
 
     }
     
-    @IBAction func toCreditCard(_ sender: Any) {
-    performSegue(withIdentifier: _toCreditCard, sender: nil)
-    }
-    
     @IBAction func toEnd(_ sender: Any) {
         performSegue(withIdentifier: _toEnd, sender: nil)
     }
     
+    @IBAction func toCreditCard(_ sender: Any) {
+        performSegue(withIdentifier: _toCreditCard, sender: nil)
+    }
 }

@@ -7,7 +7,7 @@ class CreditCardController: UIViewController {
     @IBOutlet weak var titulaireTxtField: UITextField!
     @IBOutlet weak var numberTxtField: UITextField!
     @IBOutlet weak var expTxtField: UITextField!
-    @IBOutlet weak var nextOutletBtn: UIButton!
+ 
     
     var name: String?
     var address: String?
@@ -25,7 +25,6 @@ class CreditCardController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nextOutletBtn.isEnabled = false
 
 
         if result != nil{
@@ -65,22 +64,9 @@ class CreditCardController: UIViewController {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
-        checkTextFields()
     }
     
-    func checkTextFields() {
-        guard
-            let titulaire = titulaireTxtField.text, !titulaire.isEmpty,
-            let number = numberTxtField.text, !number.isEmpty,
-            let exp = expTxtField.text, !exp.isEmpty
-            else {
-                nextOutletBtn.isEnabled = false
-                nextOutletBtn.alpha = 0.5
-                return
-        }
-        nextOutletBtn.isEnabled = true
-        nextOutletBtn.alpha = 1
-    }
+  
     
 
 
@@ -92,8 +78,9 @@ class CreditCardController: UIViewController {
         performSegue(withIdentifier: _toPaymentChoose, sender: nil)
     }
     
-    @IBAction func toRecap(_ sender: Any) {
+    @IBAction func toRecapBtn(_ sender: Any) {
         performSegue(withIdentifier: _toRecap, sender: nil)
     }
+    
 }
 
