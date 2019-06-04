@@ -12,19 +12,35 @@ import PayCardsRecognizer
 
 class CreditCardController: UIViewController {
     
+    @IBOutlet weak var titulaireTxtField: UITextField!
+    @IBOutlet weak var numberTxtField: UITextField!
+    @IBOutlet weak var expTxtField: UITextField!
+    
     var name: String?
     var address: String?
     var town: String?
     var time: String?
     
     var recognizer: PayCardsRecognizer!
+    var result: PayCardsRecognizerResult?
+
     private var _toPaymentChoose = "toPaymentChoose"
     private var _toRecap = "toRecap"
+    private var _toRecognizer = "toRecognizer"
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-               
+        
+        if result != nil{
+            self.titulaireTxtField.text = result?.recognizedHolderName
+            self.numberTxtField.text = result?.recognizedNumber?.format(" ")
+            
+            if let month = result?.recognizedExpireDateMonth, let year = result?.recognizedExpireDateYear {
+                expTxtField.text = String(format: "%@/%@", month, year)
+            }
+        }
+        
         hideKeyboardWhenTappedAround()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -59,7 +75,7 @@ class CreditCardController: UIViewController {
 
 
     @IBAction func cardDetect(_ sender: Any) {
-        recognizer.startCamera()
+        performSegue(withIdentifier: _toRecognizer, sender: nil)
     }
     
     @IBAction func toPaymentChoose(_ sender: Any) {

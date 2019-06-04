@@ -11,6 +11,7 @@
 		4292B33722A64ACB0099DA80 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292B33622A64ACA0099DA80 /* Menu.swift */; };
 		4292B33922A64B1A0099DA80 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292B33822A64B1A0099DA80 /* Product.swift */; };
 		4292B33C22A64B970099DA80 /* ImgMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292B33B22A64B970099DA80 /* ImgMenu.swift */; };
+		4292B33E22A66C810099DA80 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4292B33D22A66C810099DA80 /* RecognizerViewController.swift */; };
 		42A497882251F87E00866C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497872251F87E00866C32 /* AppDelegate.swift */; };
 		42A4978A2251F87E00866C32 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A497892251F87E00866C32 /* HomeController.swift */; };
 		42A4978D2251F87E00866C32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A4978B2251F87E00866C32 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		4292B33622A64ACA0099DA80 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		4292B33822A64B1A0099DA80 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		4292B33B22A64B970099DA80 /* ImgMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgMenu.swift; sourceTree = "<group>"; };
+		4292B33D22A66C810099DA80 /* RecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerViewController.swift; sourceTree = "<group>"; };
 		42A497842251F87E00866C32 /* morning-boss0419.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "morning-boss0419.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A497872251F87E00866C32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A497892251F87E00866C32 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				42E2C65822A3DD3A00877877 /* CreditCardController.swift */,
 				42E2C65A22A3DD6E00877877 /* RecapController.swift */,
 				42E2C65C22A3DD9A00877877 /* EndOrderController.swift */,
+				4292B33D22A66C810099DA80 /* RecognizerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4292B33E22A66C810099DA80 /* RecognizerViewController.swift in Sources */,
 				42E2C66122A417A100877877 /* MenuCell.swift in Sources */,
 				42E2C65722A3DD0000877877 /* PaymentChoiceController.swift in Sources */,
 				4292B33922A64B1A0099DA80 /* Product.swift in Sources */,
