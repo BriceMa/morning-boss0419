@@ -1,11 +1,3 @@
-//
-//  CreditCardController.swift
-//  morning-boss0419
-//
-//  Created by Brice on 02/06/2019.
-//  Copyright © 2019 Brice Mangeat. All rights reserved.
-//
-
 import UIKit
 import PayCardsRecognizer
 
@@ -15,6 +7,7 @@ class CreditCardController: UIViewController {
     @IBOutlet weak var titulaireTxtField: UITextField!
     @IBOutlet weak var numberTxtField: UITextField!
     @IBOutlet weak var expTxtField: UITextField!
+    @IBOutlet weak var nextOutletBtn: UIButton!
     
     var name: String?
     var address: String?
@@ -32,6 +25,9 @@ class CreditCardController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nextOutletBtn.isEnabled = false
+
+
         if result != nil{
             self.titulaireTxtField.text = result?.recognizedHolderName
             self.numberTxtField.text = result?.recognizedNumber?.format(" ")
@@ -42,7 +38,6 @@ class CreditCardController: UIViewController {
         }
         
         hideKeyboardWhenTappedAround()
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
@@ -70,6 +65,21 @@ class CreditCardController: UIViewController {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
+        checkTextFields()
+    }
+    
+    func checkTextFields() {
+        guard
+            let titulaire = titulaireTxtField.text, !titulaire.isEmpty,
+            let number = numberTxtField.text, !number.isEmpty,
+            let exp = expTxtField.text, !exp.isEmpty
+            else {
+                nextOutletBtn.isEnabled = false
+                nextOutletBtn.alpha = 0.5
+                return
+        }
+        nextOutletBtn.isEnabled = true
+        nextOutletBtn.alpha = 1
     }
     
 

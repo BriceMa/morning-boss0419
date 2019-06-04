@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct Menu {
-    var __v: Int
-    var _id: String
-    var createdAt: String
-    var id: String
-    var imgMenu: ImgMenu
-    var products: [Produit]
-    var updatedAt: String
+struct Menu : Codable {
+    var __v: Int?
+    var _id: String?
+    var createdAt: String?
+    var id: String?
+    var imgMenu: ImgMenu?
+    var products: [Product]?
+    var updatedAt: String?
 }

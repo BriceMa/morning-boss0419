@@ -9,16 +9,16 @@
 import Foundation
 
 
-struct Produit{
-    var name: String
-    var shortDesc: String
-    var longDesc: String
-    var categorie: String
-    var _id: String
-    var createdAt: String
-    var updatedAt: String
-    var __v: Int
-    var id: String
-    var imageProduct: String
-    var allergens: String
+struct Product : Codable {
+    var name: String?
+    var shortDesc: String?
+    var longDesc: String?
+    var categorie: String?
+    var _id: String?
+    var createdAt: String?
+    var updatedAt: String?
+    var __v: Int?
+    var id: String?
+    var imageProduct: String?
+    var allergens: String?
 }

@@ -19,27 +19,15 @@ class MenuService {
         
         AF.request(url).responseJSON { response in
             
-            
-//            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8){
-//                print("Data: \(utf8Text)")
-//                success(utf8Text as! [Menu] )
-//            }
-
-            
-            
-            switch response.result {
-            case .success(let value):
-                let menus = value
-                print(menus)
-                //success(menus as! [Menu])
-                break
-
-            case .failure(let error):
-                failure(error)
-                break
+            if let data = response.data {
+                do {
+                    let menus = try JSONDecoder().decode([Menu].self, from: data)
+                    
+                    success(menus)
+                } catch let e {
+                    failure(e)
+                }
             }
-            
-
         }
         
         

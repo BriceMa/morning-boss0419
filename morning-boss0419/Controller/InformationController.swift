@@ -1,17 +1,10 @@
-//
-//  ValidateController.swift
-//  morning-boss0419
-//
-//  Created by Brice on 16/05/2019.
-//  Copyright © 2019 Brice Mangeat. All rights reserved.
-//
-
 import UIKit
 
 class InformationController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     private var _segueToPaymentChoose = "toPaymentChoose"
     private var _segueToHome = "toHome"
+    
     var pickerData: [String] = [String]()
     let thePicker = UIPickerView()
 
@@ -19,12 +12,14 @@ class InformationController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var adressUser: UITextField!
     @IBOutlet weak var townUser: UITextField!
     @IBOutlet weak var hourTextField: UITextField!
+    @IBOutlet weak var nextOutletBtn: UIButton!
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nextOutletBtn.isEnabled = false
+
         self.thePicker.delegate = self
         self.thePicker.dataSource = self
         pickerData = ["6:30","7:00","7:30","8:00","8:30","9:00","9:30","10:00","10:30"]
@@ -53,6 +48,30 @@ class InformationController: UIViewController, UIPickerViewDelegate, UIPickerVie
             }
         }
     }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+        
+        checkTextFields()
+    }
+
+    
+    func checkTextFields() {
+        guard
+            let name = nameUser.text, !name.isEmpty,
+            let adress = adressUser.text, !adress.isEmpty,
+            let town = townUser.text, !town.isEmpty,
+            let hour = hourTextField.text, !hour.isEmpty
+            else {
+                nextOutletBtn.isEnabled = false
+                nextOutletBtn.alpha = 0.5
+                return
+        }
+        nextOutletBtn.isEnabled = true
+        nextOutletBtn.alpha = 1
+    }
 
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -73,18 +92,14 @@ class InformationController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
  
     
-    @objc func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
-        }
-    }
+    
 
+    
+    
+    
     @IBAction func nextBtn(_ sender: Any) {
         performSegue(withIdentifier: _segueToPaymentChoose, sender: nil)
-    
-    }
-    
-    
+        }
     @IBAction func homeBtn(_ sender: Any) {
         performSegue(withIdentifier: _segueToHome, sender: nil)
         
