@@ -25,6 +25,24 @@ class InformationController: UIViewController, UIPickerViewDelegate, UIPickerVie
         pickerData = ["6:30","7:00","7:30","8:00","8:30","9:00","9:30","10:00","10:30"]
         hourTextField.inputView = thePicker
         
+        let defaults = UserDefaults.standard
+        
+        if let nameUserTxt = defaults.string(forKey: "nameLocalStorage"){
+            self.nameUser.text = nameUserTxt
+        }
+        
+        if let adressUserTxt = defaults.string(forKey: "adressLocalStorage"){
+            self.adressUser.text = adressUserTxt
+        }
+        
+        if let timeUserTxt = defaults.string(forKey: "hourLocalStorage") {
+            self.hourTextField.text = timeUserTxt
+        }
+        
+        if let townUserTxt = defaults.string(forKey: "townLocalStorage"){
+            self.townUser.text = townUserTxt
+        }
+        
         hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -99,6 +117,11 @@ class InformationController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func nextBtn(_ sender: Any) {
         performSegue(withIdentifier: _segueToPaymentChoose, sender: nil)
+        let defaults = UserDefaults.standard
+        defaults.set(nameUser.text, forKey: "nameLocalStorage")
+        defaults.set(adressUser.text, forKey: "adressLocalStorage")
+        defaults.set(townUser.text, forKey: "townLocalStorage")
+        defaults.set(hourTextField.text, forKey: "hourLocalStorage")
         }
     @IBAction func homeBtn(_ sender: Any) {
         performSegue(withIdentifier: _segueToHome, sender: nil)

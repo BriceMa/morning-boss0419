@@ -28,18 +28,17 @@ class RecapController: UIViewController {
         super.viewDidLoad()
         nextOutletBtn.isEnabled = false
 
-                
         timeTxtField.text = self.time
         addressTxtField.text = self.address
         townTxtField.text = self.town
 
     }
     
+    @IBAction func toCreditCard(_ sender: Any) {
+        performSegue(withIdentifier: _toCreditCard, sender: nil)
+    }
     @IBAction func toEnd(_ sender: Any) {
         performSegue(withIdentifier: _toEnd, sender: nil)
     }
     
-    @IBAction func toCreditCard(_ sender: Any) {
-        performSegue(withIdentifier: _toCreditCard, sender: nil)
-    }
 }

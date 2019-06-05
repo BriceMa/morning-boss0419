@@ -7,7 +7,8 @@ class CreditCardController: UIViewController {
     @IBOutlet weak var titulaireTxtField: UITextField!
     @IBOutlet weak var numberTxtField: UITextField!
     @IBOutlet weak var expTxtField: UITextField!
- 
+    @IBOutlet weak var nextOutletBtn: UIButton!
+    
     
     var name: String?
     var address: String?
@@ -24,6 +25,9 @@ class CreditCardController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        nextOutletBtn.isEnabled = false
+
         
 
 
@@ -64,6 +68,22 @@ class CreditCardController: UIViewController {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
+        
+        checkTextFields()
+    }
+    
+    func checkTextFields() {
+        guard
+            let nameCard = titulaireTxtField.text, !nameCard.isEmpty,
+            let numberCard = numberTxtField.text, !numberCard.isEmpty,
+            let expCard = expTxtField.text, !expCard.isEmpty
+            else {
+                nextOutletBtn.isEnabled = false
+                nextOutletBtn.alpha = 0.5
+                return
+        }
+        nextOutletBtn.isEnabled = true
+        nextOutletBtn.alpha = 1
     }
     
   
