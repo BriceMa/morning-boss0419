@@ -74,7 +74,6 @@ class InformationController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         checkTextFields()
     }
-
     
     func checkTextFields() {
         guard

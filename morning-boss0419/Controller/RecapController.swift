@@ -1,11 +1,3 @@
-//
-//  RecapController.swift
-//  morning-boss0419
-//
-//  Created by Brice on 02/06/2019.
-//  Copyright © 2019 Brice Mangeat. All rights reserved.
-//
-
 import UIKit
 
 class RecapController: UIViewController {
@@ -26,12 +18,21 @@ class RecapController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextOutletBtn.isEnabled = false
 
         timeTxtField.text = self.time
         addressTxtField.text = self.address
         townTxtField.text = self.town
 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == _toEnd) {
+            let endVC = segue.destination as! EndOrderController
+            endVC.name = self.name
+            endVC.address = self.address
+            endVC.town = self.town
+            endVC.time = self.time
+        }
     }
     
     @IBAction func toCreditCard(_ sender: Any) {

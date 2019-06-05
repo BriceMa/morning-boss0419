@@ -3,6 +3,7 @@ import UIKit
 class MenusController: UIViewController {
     
     private var _segueToHome = "toHome"
+    private var _toInformation = "toInformation"
     var menus = [Menu]()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -26,11 +27,22 @@ class MenusController: UIViewController {
     }
     
     
-
+    
+    @IBAction func toInformation(_ sender: Any) {
+        performSegue(withIdentifier: _toInformation, sender: nil)
+    }
+    
     @IBAction func toHome(_ sender: Any) {
         performSegue(withIdentifier: _segueToHome, sender: nil)
     }
     
+    @IBAction func toProfile(_ sender: Any) {
+        self.toastMessage("Cette fonctionnalité n'est pas disponible actuellement.")
+        Vibration.light.vibrate()    }
+    @IBAction func toOrder(_ sender: Any) {
+        self.toastMessage("Cette fonctionnalité n'est pas disponible actuellement.")
+        Vibration.light.vibrate()
+    }
 }
 
 extension MenusController: UICollectionViewDataSource{

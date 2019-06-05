@@ -57,7 +57,10 @@ class RecognizerViewController: UIViewController, PayCardsRecognizerPlatformDele
         vc.result = sender as? PayCardsRecognizerResult
     }
 
-
+    @IBAction func toCreditCard(_ sender: Any) {
+        performSegue(withIdentifier: _toCreditCard, sender: nil)
+    }
+    
 
 }
 
